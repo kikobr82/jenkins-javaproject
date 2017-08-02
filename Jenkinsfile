@@ -44,8 +44,8 @@ pipeline {
         label 'CentOS'
       }
       steps {
-        sh "wget http://jenkinsserver.jlab.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
-        sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
+        sh "wget -o ~/rectangle_${env.BUILD_NUMBER} http://jenkinsserver.jlab.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
+        sh "java -jar ~/rectangle_${env.BUILD_NUMBER}.jar 3 4"
       }
     }
   } 
