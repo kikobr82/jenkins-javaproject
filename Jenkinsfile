@@ -50,7 +50,7 @@ pipeline {
     }
     stage ("Test on Debian") {
       agent {
-        docker 'openjdk:8u121-jre'
+        docker 'openjdk:8u131-jre'
       }
       steps {
         sh "wget http://jenkinsserver.jlab.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
