@@ -60,7 +60,7 @@ pipeline {
 
     stage ("Promote to Green") {
       steps {
-        sh "cp /var/www/html/all/rectangle_${env.BUILD)_NUMBER}.jar /var/www/html/green/rectangle_${env.BUILD)_NUMBER}.jar"
+        sh "cp /var/www/html/all/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/green/rectangle_${env.BUILD_NUMBER}.jar"
       }
     }
   } 
