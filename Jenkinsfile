@@ -41,7 +41,7 @@ pipeline {
     
     stage ("Running on Centos") {
       agent {
-        label 'CentOS'
+        label 'apache'
       }
       steps {
         sh "wget http://jenkinsserver.jlab.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
