@@ -35,7 +35,9 @@ pipeline {
         label 'apache'
       }
       steps {
+
         echo "Deploying - Guanrantee.v4"
+
         sh "mkdir /var/www/html/rectangles/all/${env.BRANCH_NAME}"
         sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BRANCH_NAME}/"
       }
